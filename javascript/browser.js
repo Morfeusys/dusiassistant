@@ -29,6 +29,7 @@ function Browser() {
         if (!connected) {
             websocket = new WebSocket('ws://api.dusi.mobi:8000/browser?id=' + id);
             websocket.onmessage = function(evt) {
+                win.focus();
                 win.location = evt.data;
             };
             websocket.onopen = function() {
