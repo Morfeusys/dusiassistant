@@ -23,6 +23,7 @@
               <img alt="Get it on Google Play" src="images/ru_generic_rgb_wo_60.png" />
             </a>
           </p>
+          <button class="btn btn-warning btn-lg" onclick="connect()">Подключить Браузер</button>
         </div>
         <div class="mastfoot">
           <div class="inner">
@@ -32,6 +33,15 @@
       </div>
     </div>
   </div>
+  <script src="javascript/jquery-2.1.1.min.js"></script>
+  <script src="javascript/jquery.cookie-1.4.1.min.js"></script>
   <script src="javascript/bootstrap.min.js"></script>
+  <script src="javascript/browser.js"></script>
+  <script type="text/javascript">
+    var browser = new Browser();
+    function connect() {
+        browser.connect();
+    }
+  </script>
   </body>
 </html>
