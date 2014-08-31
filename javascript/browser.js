@@ -22,11 +22,9 @@ function Browser() {
             win.focus();
         } else {
             win = window.open('window.html', 'websocket', 'height=' + screen.height + ',width=' + screen.width + ',resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no');
-            if (connected) {
-                win.onload = function() {
-                    win.onOpen(id);
-                };
-            }
+            win.onload = function() {
+                if (connected) win.onOpen(id);
+            };
         }
         if (!connected) {
             websocket = new WebSocket('ws://api.dusi.mobi:8000/browser?id=' + id);
@@ -35,7 +33,7 @@ function Browser() {
             };
             websocket.onopen = function() {
                 connected = true;
-                win.onOpen(id);
+                if(win.onOpen) win.onOpen(id);
             };
             websocket.onclose = function() {
                 connected = false;
