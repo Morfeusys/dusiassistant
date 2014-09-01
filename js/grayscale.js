@@ -48,14 +48,6 @@ $(function() {
       openEffect  : 'none',
       closeEffect : 'none'
     });
-    $('.window').windows({
-      snapping: true,
-      snapSpeed: 500,
-      snapInterval: 500,
-      onScroll: function(s){},
-      onSnapComplete: function($el){},
-      onWindowEnter: function($el){}
-    });
 });
 
 // Closes the Responsive Menu on Menu Item Click
