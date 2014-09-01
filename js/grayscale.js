@@ -5,12 +5,27 @@
  */
 
 // jQuery to collapse the navbar on scroll
-$(window).scroll(function() {
+var fadeDivs$ = $('.fadeInScroll');
+var $win = $(window);
+$win.scroll(function() {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
     }
+    var scrollTop = $win.scrollTop();
+    fadeDivs$.each(function () {
+      var $self = $(this);
+      var prev = $self.offset();
+      if (prev) {
+        var pt = prev.top - $win.height();
+        $self.css({
+          opacity: (scrollTop - pt) / ($self.offset().top - pt)
+        });
+      } else {
+        $self.css({opacity: 1});
+      }
+    });
 });
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -22,21 +37,20 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+    $(".various").fancybox({
+      maxWidth    : 800,
+      maxHeight   : 600,
+      fitToView   : false,
+      width       : '70%',
+      height      : '70%',
+      autoSize    : false,
+      closeClick  : false,
+      openEffect  : 'none',
+      closeEffect : 'none'
+    });
 });
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
-});
-
-$(".various").fancybox({
-    maxWidth    : 800,
-    maxHeight   : 600,
-    fitToView   : false,
-    width       : '70%',
-    height      : '70%',
-    autoSize    : false,
-    closeClick  : false,
-    openEffect  : 'none',
-    closeEffect : 'none'
 });
