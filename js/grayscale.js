@@ -15,16 +15,9 @@ $win.scroll(function() {
     }
     var scrollTop = $win.scrollTop();
     fadeDivs$.each(function () {
-      var $self = $(this);
-      var prev = $self.offset();
-      if (prev) {
-        var pt = prev.top - $win.height();
-        $self.css({
-          opacity: (scrollTop - pt) / ($self.offset().top - pt)
-        });
-      } else {
-        $self.css({opacity: 1});
-      }
+        var a = $(this).offset().top + $(this).height();
+        var b = $win.scrollTop() + $win.height();
+        if (a < b) $(this).fadeTo(500,1);
     });
 });
 
@@ -48,6 +41,7 @@ $(function() {
       openEffect  : 'none',
       closeEffect : 'none'
     });
+    fadeDivs$.fadeTo(0, 0);
 });
 
 // Closes the Responsive Menu on Menu Item Click
