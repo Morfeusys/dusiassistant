@@ -13,12 +13,7 @@ $win.scroll(function() {
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
     }
-    var scrollTop = $win.scrollTop();
-    fadeDivs$.each(function () {
-        var a = $(this).offset().top + $(this).height();
-        var b = $win.scrollTop() + $win.height();
-        if (a < b) $(this).fadeTo(500,1);
-    });
+    fadeIn();
 });
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -42,7 +37,16 @@ $(function() {
       closeEffect : 'none'
     });
     fadeDivs$.fadeTo(0, 0);
+    fadeIn();
 });
+
+function fadeIn() {
+    var b = $win.scrollTop() + $win.height();
+    fadeDivs$.each(function () {
+        var a = $(this).offset().top + $(this).height();
+        if (a < b) $(this).fadeTo(500,1);
+    });
+}
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
