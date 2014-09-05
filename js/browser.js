@@ -21,7 +21,7 @@ function Browser() {
         if (win && !win.closed) {
             win.focus();
         } else {
-            win = window.open('window.html', 'websocket', 'height=' + screen.height + ',width=' + screen.width + ',resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no');
+            win = window.open('browser.html', 'websocket', 'height=' + screen.height + ',width=' + screen.width + ',resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no');
             win.onload = function() {
                 if (connected) win.onOpen(id);
             };
@@ -54,3 +54,11 @@ function Browser() {
 
     Browser.prototype.connect = connect;
 }
+
+$(function() {
+    var browser = new Browser();
+    function connect() {
+        browser.connect();
+    }
+    $('#browser').click(connect);
+});
