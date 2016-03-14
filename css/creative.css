@@ -478,3 +478,13 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+
+iframe {
+    width: 100%;
+}
+
+@media only screen and (max-device-width: 800px) {
+    #contact a > i.fa {
+        margin: 20px;
+    }
+}
