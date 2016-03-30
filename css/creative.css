@@ -60,6 +60,15 @@ p {
     background-color: #222;
 }
 
+.bg-qr {
+    background-color: #4c9d3f;
+    color: #fff;
+}
+
+.bg-qr .row {
+    margin-bottom: 40px;
+}
+
 .text-faded {
     color: rgba(255,255,255,.7);
 }
