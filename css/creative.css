@@ -71,6 +71,20 @@ p {
     background-color: #212621;
 }
 
+.bg-elsmart {
+    height: 400px;
+    padding-top: 0 !important;
+    background: url("../img/green_line.jpg") repeat-x;
+}
+
+.bg-elsmart .content {
+    padding: 40px;
+}
+
+.bg-elsmart h1 {
+    color: #5b5b5b;
+}
+
 .bg-cardroid {
     background-color: #eaebee;
 }
