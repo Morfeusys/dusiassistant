@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Voice Assistant Dusi">
+    <meta name="author" content="UseYoVoice">
+
+    <title>Dusi Assistant</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="../css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/creative.css" type="text/css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-41772694-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- Start of useyovoice Zendesk Widget script -->
+    <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","useyovoice.zendesk.com");/*]]>*/</script>
+    <!-- End of useyovoice Zendesk Widget script -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">Dusi Assistant</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll" href="#online">Dusi Online</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="http://blog.dusi.mobi">Blog</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="http://idea.dusi.mobi">Your ideas</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="http://blog.dusi.mobi/forum/">Forum</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contact">Contacts</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <a href="#about" class="btn btn-primary btn-xl page-scroll wow bounceIn">Learn More</a>
+        </div>
+    </div>
+</header>
+
+<section class="bg-primary" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Your personal voice assistant</h2>
+                <hr class="light">
+                <p class="text-faded">Dusi is a voice assistant for Android which enables you to perform any commands and control any devices around you</p>
+                <a href="https://www.youtube.com/watch?v=qS35rHyxuds" target="_blank" class="btn btn-default btn-xl">How it works?</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">What Dusi can do?</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-microphone wow bounceIn text-primary"></i>
+                    <h3>Understands your speech</h3>
+                    <p class="text-muted">Dusi understands even complex commands instead of "trigger phrases"</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-cog wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                    <h3>Adjustable</h3>
+                    <p class="text-muted">Dusi has many options to fulfill your requirements</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-mobile-phone wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                    <h3>Works in the background</h3>
+                    <p class="text-muted">Dusi can work even when she's not visible on the screen</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-code wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                    <h3>Programmable</h3>
+                    <p class="text-muted">Everyone can create their functions without a single line of code</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="no-padding" id="portfolio">
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="col-lg-4 col-sm-12">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qS35rHyxuds" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/B_lF0CoZ-0c" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/h1h1s4A1F0g" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="row no-gutter">
+            <div class="col-lg-4 col-sm-12 col-md-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xqWz-JN2R-g" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-4 col-sm-12 col-md-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tup8C2ZiRns" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-4 col-sm-12 col-md-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ax17Z1v3XYg" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<aside class="bg-dark">
+    <div class="container text-center">
+        <div class="call-to-action">
+            <h2>Download free on Google Play</h2>
+            <a href="https://play.google.com/store/apps/details?id=com.dusiassistant" class="btn btn-default btn-xl wow tada">Download</a>
+        </div>
+    </div>
+</aside>
+
+<section id="online" class="bg-online">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <iframe width="560" height="400" src="https://www.youtube.com/embed/-sjq3wkGYoE" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="section-heading">Dusi Online</h2>
+                <p class="lead">With <a href="http://online.dusi.mobi">Dusi Online</a> you have access to all functions of your assistant right through the computer!</p>
+                <p>You even don't have to press any buttons. Just pronounce the name of your assistant as you where talking with a human. Your browser listens you even in background mode.</p>
+                <p><b>And there are no any complicated settings!</b></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<aside class="telegram wow fadeIn">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2 class="section-heading wow fadeIn">Send commands to your virtual assistant directly through the chat in messenger!</h2>
+            </div>
+        </div><br/><br/>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <p class="lead">Without touching the smartphone or using voice. You can use any device with any operation system for remote control from Skype or Telegram.</p>
+                <a href="http://blog.dusi.mobi/2016/04/13/messenger/" class="btn btn-primary btn-xl page-scroll wow bounceIn">Learn More</a>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<!--<aside class="bg-qr hidden-md">-->
+    <!--<div class="container text-center">-->
+        <!--<div class="row">-->
+            <!--<div class="col-lg-8 col-lg-offset-2">-->
+                <!--<h2 class="section-heading wow fadeIn">Run commands with QR codes!</h2>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="col-lg-3">-->
+                <!--<img alt="Point the camera" class="wow fadeIn" src="http://qrcoder.ru/code/?dusi%3A%2F%2Fsay%3Ftext%3D%EF%F0%E8%E2%E5%F2%21+%FF+%E2%E0%F8+%EB%E8%F7%ED%FB%E9+%E3%EE%EB%EE%F1%EE%E2%EE%E9+%E0%F1%F1%E8%F1%F2%E5%ED%F2&4&0">-->
+            <!--</div>-->
+            <!--<div class="col-lg-3">-->
+                <!--<img alt="Point the camera" class="wow fadeIn" data-wow-delay=".3s" src="http://qrcoder.ru/code/?dusi%3A%2F%2Fsay%3Ftext%3D%FF+%F3%EC%E5%FE+%ED%E5+%F2%EE%EB%FC%EA%EE+%F7%E8%F2%E0%F2%FC+%F2%E5%EA%F1%F2+%E8%E7+QR+%EA%EE%E4%EE%E2%2C+%ED%EE+%E8+%E2%FB%EF%EE%EB%ED%FF%F2%FC+%EA%EE%EC%E0%ED%E4%FB&4&0">-->
+            <!--</div>-->
+            <!--<div class="col-lg-3">-->
+                <!--<img alt="Point the camera" class="wow fadeIn" data-wow-delay=".6s" src="http://qrcoder.ru/code/?dusi%3A%2F%2Finput%3Ftext%3D%EA%E0%EA%EE%E9+%E4%E5%ED%FC+%ED%E5%E4%E5%EB%E8&6&0">-->
+            <!--</div>-->
+            <!--<div class="col-lg-3">-->
+                <!--<img alt="Point the camera" class="wow fadeIn" data-wow-delay=".9s" src="http://qrcoder.ru/code/?dusi%3A%2F%2Finput%3Ftext%3D%E2%F0%E5%EC%FF&6&0">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="col-lg-8 col-lg-offset-2 text-center">-->
+                <!--<p class="wow fadeIn" data-wow-delay="1.2s">Install any program for QR codes recognition and point your camera at a QR code. Dusi can read the text and execute it automatically!</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</aside>-->
+
+<section>
+    <div class="container">
+        <div class="row text-center">
+            <h2>Dusi is not only a voice assistant for your smartphone</h2>
+            <hr class="primary"/>
+        </div>
+        <div class="row text-center">
+            <p class="lead">Our own Natural Language Processing technology enables us to develop much more things. Let's take a look!</p>
+        </div>
+    </div>
+</section>
+
+<aside class="bg-art wow fadeIn">
+    <div class="container">
+        <div class="row text-center">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/tRIIMY5VUlk" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+        <div class="row" style="margin-top: 20px">
+            <div class="col-lg-12">
+                <p class="lead">Aggregate is an open-sourced cross-platform framework for voice assistants development. It works on any computer, device and under any operating system.
+                    Send commands right from your computer or even RaspberryPi! Create your own voice assistant for your needs. <b>And yes - it's free!</b></p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <a href="http://art.dusi.mobi" target="_blank" class="btn btn-primary btn-xl">Learn More</a>
+        </div>
+    </div>
+</aside>
+
+<section class="bg-elsmart">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 hidden-sm hidden-xs">
+                <img src="../img/elsmart.jpg" alt="ElSmart" class="wow fadeIn">
+            </div>
+            <div class="col-md-8 col-sm-12 col-xs-12">
+                <div class="content wow fadeIn">
+                    <h1><b>El</b>Smart</h1>
+                    <p class="lead">The world's first screen-less Android smartphone for blind users with built-in voice assistant.</p>
+                    <p>Enables blind users to perform any actions with their device and connect with any service through the voice control and physical keyboard.</p>
+                    <p>Developed with <a href="http://elitagroup.ru/" target="_blank">ElitaGroup company</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-cardroid wow fadeIn">
+    <div class="container">
+        <div class="row text-center">
+            <img src="../img/cardroid.png" alt="Cardroid" style="margin-bottom: 30px">
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="lead"><a href="https://www.youtube.com/v/3MJ26TwMQZw&version=3" target="_blank">Voice assistant for your connected car system</a>. Lets the driver to perform any actions without being distracted from the road.
+                    Switch audio tracks, get directions, make calls via Bluetooth and much more.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<aside class="bg-markup wow fadeIn">
+    <div class="container">
+        <div class="row text-center">
+            <h1>Speech Markup</h1>
+            <h2>API for speech meaning extraction</h2>
+        </div>
+        <div class="row" style="margin: 30px">
+            <div class="col-lg-12">
+                <p class="lead">Online service for developers that automatically extracts semantic objects from any text or speech, and converts them into the desired format of your system.
+                    And this can be done without any code! It's only necessary to send a request and get a response. <b>And it is also free!</b></p>
+            </div>
+        </div>
+        <div class="row text-center wow bounceIn">
+            <a href="http://markup.dusi.mobi" class="btn btn-warning btn-xl" target="_blank">Try it Now</a>
+        </div>
+    </div>
+</aside>
+
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Let's keep in touch!</h2>
+                <hr class="primary">
+                <p>In <a href="http://blog.dusi.mobi">Our blog</a>, <a href="https://new.vk.com/dusi_mobi">VK</a> and <a href="https://plus.google.com/u/0/communities/102112390188436612789"> Google+</a> You can find the most interesting stories regarding the voice control technologies and the latest news about our projects!</p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-3">
+                <a href="http://blog.dusi.mobi" title="Наш блог"><i class="fa fa-wordpress fa-4x wow bounceIn"></i></a>
+            </div>
+            <div class="col-md-3">
+                <a href="https://plus.google.com/u/0/communities/102112390188436612789" title="Dusi in Google+"><i class="fa fa-google-plus-square fa-4x wow bounceIn"></i></a>
+            </div>
+            <div class="col-md-3">
+                <a href="https://vk.com/dusi_mobi" title="Dusi in VK"><i class="fa fa-vk fa-4x wow bounceIn"></i></a>
+            </div>
+            <div class="col-md-3">
+                <a href="https://www.youtube.com/channel/UC63necdCFfx4rURqxSq_AqA/" title="Dusi in Youtube"><i class="fa fa-youtube-play fa-4x wow bounceIn"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>Copyright &copy; UseYoVoice 2016</p>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="../js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="../js/jquery.easing.min.js"></script>
+<script src="../js/jquery.fittext.js"></script>
+<script src="../js/wow.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../js/creative.js"></script>
+
+<script src="../js/jquery.cookie-1.4.1.min.js"></script>
+
+</body>
+
+</html>
